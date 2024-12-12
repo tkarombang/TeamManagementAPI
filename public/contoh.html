@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/contoh.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-control">
+      <form action="#">
+        <select name="category" id="category">
+          <option value="">Category</option>
+          <option value="id">ID</option>
+          <option value="nama">Nama</option>
+          <option value="address">Address</option>
+        </select>
+        <input type="text" placeholder="Search">
+        <button class="btn-search"><i data-feather="search" style="width: 16px; height: 16px;"></i>Search</button>
+        <button class="btn-refresh"><i data-feather="rotate-cw" style="width: 16px; height: 16px;"></i>Refresh</button>
+      </form>
+    </div>
+
+    <div class="table">
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Nama</th>
+          <th>Adress</th>
+          <th>ZIP</th>
+          <th>Country</th>
+          <th>Employes</th>
+          <th>Industry</th>
+          <th>Market Cap</th>
+          <th>Domain</th>
+          <th>CEO Name</th>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td>Muhammad Azwar Anas</td>
+          <td>Polewali Mnadar</td>
+          <td>91354</td>
+          <td>Indonesia</td>
+          <td>StarTink</td>
+          <td>Technology</td>
+          <td>10.000.000.000</td>
+          <td>startink.com</td>
+          <td>Mas Elon</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    feather.replace();
+  </script>
+</body>
+
+</html>

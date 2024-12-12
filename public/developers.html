@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="./css/developers-style.css">
+</head>
+
+<body>
+  <h2>Manage Developers</h2>
+  <form id="developerForm" method="POST" action="/developer">
+    <label for="developerId">Developer ID:</label>
+    <input type="text" id="developerId" name="developer_id" placeholder="Leave blank for new entry">
+    <br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <label for="role">Role:</label>
+    <input type="text" id="role" name="role">
+    <br>
+    <button type="submit" name="action" value="save">Save</button>
+    <button type="submit" name="action" value="update">Update</button>
+    <button type="submit" name="action" value="delete">Delete</button>
+    <button type="button" onclick="location.href='/browse/developer'">Browse</button>
+  </form>
+  <div></div>
+  <h2>Developer List</h2>
+  <table id="developerList">
+    <thead>
+      <tr>
+        <th>Developer ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Example static data, replace with server-side or JS-generated rows -->
+      <tr>
+        <td>1</td>
+        <td>Jane Doe</td>
+        <td>jane.doe@example.com</td>
+        <td>Frontend Developer</td>
+        <td class="action-btns">
+          <button onclick="editDeveloper(1)">Edit</button>
+          <button class="delete" onclick="deleteDeveloper(1)">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>John Smith</td>
+        <td>john.smith@example.com</td>
+        <td>Backend Developer</td>
+        <td class="action-btns">
+          <button onclick="editDeveloper(2)">Edit</button>
+          <button class="delete" onclick="deleteDeveloper(2)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div></div>
+  <!-- <h2>Manage Projects</h2> -->
+  <!-- <form id="projectForm" method="POST" action="/project">
+    <label for="projectId">Project ID:</label>
+    <input type="text" id="projectId" name="project_id" placeholder="Leave blank for new entry">
+    <br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description"></textarea>
+    <br>
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="start_date">
+    <br>
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="end_date">
+    <br>
+    <label for="status">Status:</label>
+    <input type="text" id="status" name="status">
+    <br>
+    <button type="submit" name="action" value="save">Save</button>
+    <button type="submit" name="action" value="update">Update</button>
+    <button type="submit" name="action" value="delete">Delete</button>
+    <button type="button" onclick="location.href='/browse/project'">Browse</button>
+  </form> -->
+
+  <!-- <div></div>
+  <h2>Project List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Project ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Website Redesign</td>
+        <td>Redesign the corporate website</td>
+        <td>2024-01-01</td>
+        <td>2024-06-30</td>
+        <td>Ongoing</td>
+        <td class="action-btns">
+          <button onclick="editProject(1)">Edit</button>
+          <button class="delete" onclick="deleteProject(1)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div></div> -->
+
+
+  <!-- <h2>Manage Tasks</h2>
+  <form id="taskForm" method="POST" action="/task">
+    <label for="taskId">Task ID:</label>
+    <input type="text" id="taskId" name="task_id" placeholder="Leave blank for new entry">
+    <br>
+    <label for="projectId">Project ID:</label>
+    <input type="text" id="projectId" name="project_id" required>
+    <br>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+    <br>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description"></textarea>
+    <br>
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="start_date">
+    <br>
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="end_date">
+    <br>
+    <label for="priority">Priority:</label>
+    <input type="text" id="priority" name="priority">
+    <br>
+    <label for="status">Status:</label>
+    <input type="text" id="status" name="status">
+    <br>
+    <button type="submit" name="action" value="save">Save</button>
+    <button type="submit" name="action" value="update">Update</button>
+    <button type="submit" name="action" value="delete">Delete</button>
+    <button type="button" onclick="location.href='/browse/task'">Browse</button>
+  </form>
+  <div></div> -->
+  <!-- <h2>Manage Reports</h2>
+  <form id="reportForm" method="POST" action="/report">
+    <label for="reportId">Report ID:</label>
+    <input type="text" id="reportId" name="report_id" placeholder="Leave blank for new entry">
+    <br>
+    <label for="developerId">Developer ID:</label>
+    <input type="text" id="developerId" name="developer_id" required>
+    <br>
+    <label for="projectId">Project ID:</label>
+    <input type="text" id="projectId" name="project_id" required>
+    <br>
+    <label for="taskId">Task ID:</label>
+    <input type="text" id="taskId" name="task_id" required>
+    <br>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+    <br>
+    <label for="hoursSpent">Hours Spent:</label>
+    <input type="number" id="hoursSpent" name="hours_spent" step="0.01">
+    <br>
+    <label for="remarks">Remarks:</label>
+    <textarea id="remarks" name="remarks"></textarea>
+    <br>
+    <button type="submit" name="action" value="save">Save</button>
+    <button type="submit" name="action" value="update">Update</button>
+    <button type="submit" name="action" value="delete">Delete</button>
+    <button type="button" onclick="location.href='/browse/report'">Browse</button>
+  </form>
+  <div></div> -->
+
+</body>
+<script src="../dist/AppDevelopers.js" defer></script>
+<script src="../public/js/developsersScript.js"></script>
+
+</html>
