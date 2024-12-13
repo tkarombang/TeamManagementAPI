@@ -33,7 +33,7 @@ API ini dirancang untuk membantu pengelolaan data terkait tim pengembang, proyek
    ```
 2. Atur Koneksi Database (Backend Env)
 
-- Buka File appsetting.json dan sesuaikan konfigurasi koneksi PostgreSQL [klik-disini](https://github.com/tkarombang/dotnet-to-sql)
+- Buka File appsetting.json dan sesuaikan konfigurasi koneksi PostgreSQL [klik-disini](https://github.com/tkarombang/Backend_API-PostgreSQL_dotnet-8)
 
 3. Jalankan Migrasi Database (Backend Env)
 
