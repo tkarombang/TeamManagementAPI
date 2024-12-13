@@ -81,10 +81,9 @@ dotnet ef database update
 ![API](./asset/API-Swagger.png)
 
 # 👨‍💻 Tentang Pengembang
-
-Nama: Muhammad Azwar Anas
-`enter` Peran: Backend Developer
-`enter` Project ini adalah bagian dari portfolio untuk menunjukkan keahlian dalam:
+### Nama: Muhammad Azwar Anas
+### Peran: Backend Developer
+### Project ini adalah bagian dari portfolio untuk menunjukkan keahlian dalam:
 
 - Pembuatan API RESTful dengan ASP.NET Core
 - Pengelolaan database relasional menggunakan PostgreSQL
