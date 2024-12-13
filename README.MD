@@ -82,9 +82,9 @@ dotnet ef database update
 
 # 👨‍💻 Tentang Pengembang
 
-Nama: Muhammad Azwar Anas
-Peran: Backend Developer
-Project ini adalah bagian dari portfolio untuk menunjukkan keahlian dalam:
+* Nama: Muhammad Azwar Anas
+* Peran: Backend Developer
+* Project ini adalah bagian dari portfolio untuk menunjukkan keahlian dalam:
 
 - Pembuatan API RESTful dengan ASP.NET Core
 - Pengelolaan database relasional menggunakan PostgreSQL
